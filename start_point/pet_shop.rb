@@ -64,14 +64,14 @@ end
 #   end
 # end
 
-#12 ****WORKING ON******
-# def remove_pet_by_name(pet_shop, pet_name)
-#   pets_array_index = 0
-#   for pets_hash in pet_shop[:pets]
-#     if pets[:name] == pet_name
-#       end
-#   end
-# end
+# #12 ****WORKING ON******
+def remove_pet_by_name(pet_shop, pet_name)
+  for pets_h in pet_shop
+    if pets[:name] == pet_name
+      pets.delete(pets_h)
+    end
+  end
+end
 
 # def test_remove_pet_by_name
 #   remove_pet_by_name(@pet_shop, "Arthur")
@@ -124,12 +124,12 @@ end
 # end
 
 # Opt 03
-def sell_pet_to_customer(pet_shop, pet, customers)
-  if
-
-  end
-
-end
+# def sell_pet_to_customer(pet_shop, pet, customers)
+#   if
+#
+#   end
+#
+# end
 
 # #These are 'integration' tests so we want multiple asserts.
 # #If one fails the entire test should fail
