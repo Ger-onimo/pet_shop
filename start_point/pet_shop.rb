@@ -98,7 +98,7 @@ def customer_can_afford_pet(customers, new_pet)
 end
 
 
-# # Opt 03
+# # Opt 03 ATTEMPT!
 # def sell_pet_to_customer_found(pet_shop, pet, customers)
 #   pet_to_sell = find_pet_by_name(pet_shop, pet)
 #   new_pet = pet_to_sell
@@ -109,37 +109,3 @@ end
 #     end
 #
 # end
-
-# #These are 'integration' tests so we want multiple asserts.
-# #If one fails the entire test should fail
-# def test_sell_pet_to_customer__pet_found
-#   customer = @customers[0]
-#   pet = find_pet_by_name(@pet_shop,"Arthur")
-#
-#   sell_pet_to_customer(@pet_shop, pet, customer)
-#
-#   assert_equal(1, customer_pet_count(customer))
-#   assert_equal(1, pets_sold(@pet_shop))
-#   assert_equal(100, customer_cash(customer))
-#   assert_equal(1900, total_cash(@pet_shop))
-# end
-
-# @customers = [
-#   {name: "Craig", pets: ["Arthur"], cash: 1000},
-#   {name: "Zsolt", pets: [], cash: 50 }
-#   ]
-#
-# @new_pet = {name: "Bors the Younger", pet_type: :cat, breed: "Cornish Rex", price: 100 }
-#
-# @pet_shop = {
-#     pets: [
-#       {name: "Sir Percy", pet_type: :cat, breed: "British Shorthair", price: 500 },
-#       {name: "King Bagdemagus", pet_type: :cat, breed: "British Shorthair", price: 500 },
-#       {name: "Sir Lancelot", pet_type: :dog, breed: "Pomsky", price: 1000 },
-#       {name: "Arthur", pet_type: :dog, breed: "Husky", price: 900 },
-#       {name: "Tristan", pet_type: :dog, breed: "Basset Hound",price: 800 },
-#       {name: "Merlin", pet_type: :cat, breed: "Egyptian Mau", price: 1500 }
-#         ],
-#     admin: {total_cash: 1000, pets_sold: 0,},
-#     name: "Camelot of Pets"
-#   }
