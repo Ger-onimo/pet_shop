@@ -1,5 +1,5 @@
 
-#1 complete
+#1 given
 def pet_shop_name(name)
   return name[:name]
 end
@@ -19,22 +19,22 @@ def add_or_remove_cash_remove(pet_shop, amount)
   return pet_shop[:admin][:total_cash] += amount
 end
 
-#5
+#5 complete
 def pets_sold(pet_shop)
   return pet_shop[:admin][:pets_sold]
 end
 
-#6
+#6 complete
 def increase_pets_sold(pet_shop, num)
   return pet_shop[:admin][:pets_sold] += num
 end
 
-#7
+#7 complete
 def stock_count(pet_shop)
   return pet_shop[:pets].length
 end
 
-#8 + 9 complete review this to figure out what is going on!!!!!!
+#8 + 9 complete
 def pets_by_breed(pet_shop, pet_breed)
   breed_total = []
   for pets in pet_shop[:pets]
@@ -45,7 +45,7 @@ end
 return breed_total
 end
 
-#10 complete, BUT REFACTOR with #11
+#10 + 11 complete
 def find_pet_by_name(pet_shop, pet_name)
   for pets in pet_shop[:pets]
     if pets[:name] == pet_name
@@ -55,16 +55,7 @@ def find_pet_by_name(pet_shop, pet_name)
     return nil
 end
 
-#11 complete BUT REFACTOR with #10
-# def find_pet_by_name_nil(pet_shop, pet_name)
-#   for pets in pet_shop[:pets]
-#     if pets[:name] != pet_name
-#       return nil
-#     end
-#   end
-# end
-
-# #12 ****WORKING ON******
+# #12 complete
 def remove_pet_by_name(pet_shop, pet_name)
   remove_pet = find_pet_by_name(pet_shop, pet_name)
   pet_shop[:pets].delete(remove_pet)
@@ -97,7 +88,7 @@ end
 
 # OPTIONAL
 
-# Opt 01 complete BUT REFACTOR with Opt 02
+# Opt 01 + Opt 02 complete
 def customer_can_afford_pet(customers, new_pet)
   if customers[:cash] >= new_pet[:price]
     return true
@@ -106,25 +97,18 @@ def customer_can_afford_pet(customers, new_pet)
  end
 end
 
-# Opt 02 complete BUT REFACTOR with 01
-# def customer_can_afford_pet(customers, new_pet)
-#   if customers[:cash] <= new_pet[:price]
-#     return true
-#   end
-#   return false
+
+# # Opt 03
+# def sell_pet_to_customer_found(pet_shop, pet, customers)
+#   pet_to_sell = find_pet_by_name(pet_shop, pet)
+#   new_pet = pet_to_sell
+#   pet_count = customer_pet_count(customers)
+#     if pet_to_sell == pet
+#       pet_shop.add_pet_to_customer(new_pet)
+#       return pet_count
+#     end
+#
 # end
-
-# Opt 03
-def sell_pet_to_customer_found(pet_shop, pet, customers)
-  pet_to_sell = find_pet_by_name(pet_shop, pet)
-  new_pet = pet_to_sell
-  pet_count = customer_pet_count(customers)
-    if pet_to_sell == pet
-      pet_shop.add_pet_to_customer(new_pet)
-      return pet_count
-    end
-
-end
 
 # #These are 'integration' tests so we want multiple asserts.
 # #If one fails the entire test should fail
