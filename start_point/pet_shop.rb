@@ -70,12 +70,6 @@ def remove_pet_by_name(pet_shop, pet_name)
   pet_shop[:pets].delete(remove_pet)
 end
 
-# def test_remove_pet_by_name
-#   remove_pet_by_name(@pet_shop, "Arthur")
-#   pet = find_pet_by_name(@pet_shop,"Arthur")
-#   assert_nil(pet)
-# end
-
 #13 complete
 def add_pet_to_stock(pet_shop, new_pet)
   pet_shop[:pets].push(new_pet)
@@ -121,12 +115,16 @@ end
 # end
 
 # Opt 03
-# def sell_pet_to_customer(pet_shop, pet, customers)
-#   if
-#
-#   end
-#
-# end
+def sell_pet_to_customer_found(pet_shop, pet, customers)
+  pet_to_sell = find_pet_by_name(pet_shop, pet)
+  new_pet = pet_to_sell
+  pet_count = customer_pet_count(customers)
+    if pet_to_sell == pet
+      pet_shop.add_pet_to_customer(new_pet)
+      return pet_count
+    end
+
+end
 
 # #These are 'integration' tests so we want multiple asserts.
 # #If one fails the entire test should fail
@@ -143,7 +141,7 @@ end
 # end
 
 # @customers = [
-#   {name: "Craig", pets: [], cash: 1000},
+#   {name: "Craig", pets: ["Arthur"], cash: 1000},
 #   {name: "Zsolt", pets: [], cash: 50 }
 #   ]
 #
